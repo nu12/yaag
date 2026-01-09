@@ -9,6 +9,7 @@ en:
       signin_placeholder: "Enter your email address"
     sessions:
       successful: "Signed in successfully."
+      destroy: "Signed out successfully."
     signins:
       email_sent: "Sign in address sent to provided e-mail."
       email_subject: "Sign in link"

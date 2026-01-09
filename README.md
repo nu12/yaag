@@ -32,10 +32,10 @@ bundle
 
 Generate the authentication components (migrations, etc):
 ```bash
-$ gem install authentication:install
+rails g authentication:install
 ```
 
-Follow the instructions post-installation.
+Follow the on-screen post-installation instructions.
 
 ## Usage
 
@@ -58,6 +58,12 @@ class MyController < ApplicationController
     ...
   end 
 end
+```
+
+To create a copy of the views for customization, run:
+
+```bash
+rails g authentication:copy:views
 ```
 
 ## Release
