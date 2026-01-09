@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = [ "nu12" ]
   spec.email = [ "34694287+nu12@users.noreply.github.com" ]
 
-  spec.summary = "Passwordless authentication."
-  spec.description = "Passwordless authentication."
+  spec.summary = "Passwordless authentication for your Ruby on Rails app."
+  spec.description = "Yet Another Authentication Gem (YAAG) provides passwordless authentication for your Ruby on Rails app, all it takes is the user's e-mail address."
   spec.homepage = "https://github.com/nu12/yaag"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
