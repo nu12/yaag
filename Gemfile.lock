@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yaag (0.0.17)
+    yaag (0.0.18)
 
 GEM
   remote: https://rubygems.org/
