@@ -8,12 +8,12 @@ class SessionsController < ApplicationController
 
   def create
     start_new_session_for @user
-    redirect_to after_authentication_url
+    redirect_to after_authentication_url, notice: I18n.t("yaag.sessions.successful")
   end
 
   def destroy
     terminate_session
-    redirect_to new_signin_path, notice: I18n.t("yaag.sessions.successful"), status: :see_other
+    redirect_to new_signin_path, notice: I18n.t("yaag.sessions.destroy"), status: :see_other
   end
   private
     def set_user_by_token

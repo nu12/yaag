@@ -30,4 +30,10 @@ end
 
 ===============================================================
 
+More generators available for customizations:
+
+./bin/rails db:migrate g authentication:copy:views
+
+===============================================================
+
 See more at: https://github.com/nu12/yaag
