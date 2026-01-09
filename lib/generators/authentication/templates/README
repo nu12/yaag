@@ -1,0 +1,33 @@
+
+Yet Another Authentication Gem (YAAG)
+
+===============================================================
+
+To complete the installation, run a database migration:
+
+./bin/rails db:migrate
+
+===============================================================
+
+Make sure root route is present in config/routes.rb. Example:
+
+Rails.application.routes.draw do
+  ...
+  root "controller#action"
+  ...
+end
+
+===============================================================
+
+By default, all controllers require user signin.
+
+To allow unauthenticated access, add allow_unauthenticated_access to your controller. Example:
+
+class MyController < ApplicationController
+  allow_unauthenticated_access only: %i[ index ]
+  ...
+end
+
+===============================================================
+
+See more at: https://github.com/nu12/yaag

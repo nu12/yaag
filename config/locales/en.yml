@@ -1,0 +1,14 @@
+
+en:
+  yaag:
+    errors:
+      invalid_token: "Signin link is invalid or has expired."
+      rate_limit: "Try again later."
+    forms:
+      signin_button: "Sign in" 
+      signin_placeholder: "Enter your email address"
+    sessions:
+      successful: "Signed in successfully."
+    signins:
+      email_sent: "Sign in address sent to provided e-mail."
+      email_subject: "Sign in link"

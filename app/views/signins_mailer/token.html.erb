@@ -1,0 +1,5 @@
+<p>
+  You can signin <%= link_to "with this link", create_session_url(@user.email_address_login_token) %>.
+
+  This link will expire in <%= distance_of_time_in_words(0, @user.email_address_login_token_expires_in) %>.
+</p>
