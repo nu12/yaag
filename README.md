@@ -60,5 +60,11 @@ class MyController < ApplicationController
 end
 ```
 
+## Release
+
+```bash
+git tag $(bundle exec rake version | tr -d '"') && git push --tags
+```
+
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
