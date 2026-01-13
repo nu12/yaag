@@ -60,10 +60,32 @@ class MyController < ApplicationController
 end
 ```
 
-To create a copy of the views for customization, run:
+### Generators
+
+Here is a list of generator available in case any of the components of the gem need to be customized to specific application needs.
+
+For views:
 
 ```bash
 rails g authentication:copy:views
+```
+
+For controllers (including concerns):
+
+```bash
+rails g authentication:copy:controllers
+```
+
+### Test helper
+
+To be able to perform tasks as an authenticated user, a helper is available to be used in tests. Add `include Yaag::Test::SessionsHelper` to access the methods `sign_in_as` and `sign_out`:
+
+```
+class MyTest < ActionDispatch::IntegrationTest
+  include Yaag::Test::SessionsHelper
+  setup { sign_in_as(User.take) }
+  ...
+end
 ```
 
 ## Release
