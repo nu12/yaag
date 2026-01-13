@@ -81,7 +81,7 @@ rails g authentication:copy:controllers
 To be able to perform tasks as an authenticated user, a helper is available to be used in tests. Add `include Yaag::Test::SessionsHelper` to access the methods `sign_in_as` and `sign_out`:
 
 ```
-class MyTest < ActionDispatch::IntegrationTest
+class MyControllerTest < ActionDispatch::IntegrationTest
   include Yaag::Test::SessionsHelper
   setup { sign_in_as(User.take) }
   ...
