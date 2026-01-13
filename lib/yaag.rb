@@ -2,6 +2,9 @@ require "yaag/version"
 require "yaag/engine"
 
 module Yaag
+  module Test
+    autoload :SessionsHelper, "yaag/test/sessions_helper"
+  end
   module PasswordlessLogin
     extend ActiveSupport::Concern
 

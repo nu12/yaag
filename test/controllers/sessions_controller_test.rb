@@ -1,6 +1,7 @@
 require "test_helper"
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
+  include Yaag::Test::SessionsHelper
   setup { @user = User.take }
 
   test "new" do
