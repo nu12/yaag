@@ -76,9 +76,21 @@ For controllers (including concerns):
 rails g authentication:copy:controllers
 ```
 
+For mailers:
+
+```bash
+rails g authentication:copy:mailers
+```
+
+For models:
+
+```bash
+rails g authentication:copy:models
+```
+
 ### Test helper
 
-To be able to perform tasks as an authenticated user, a helper is available to be used in tests. Add `include Yaag::Test::SessionsHelper` to access the methods `sign_in_as` and `sign_out`:
+To be able to perform tasks as an authenticated user, a helper is available to be used in tests. Add `include Yaag::Test::SessionsHelper` to your test class to access the methods `sign_in_as` and `sign_out`:
 
 ```
 class MyControllerTest < ActionDispatch::IntegrationTest
@@ -87,6 +99,8 @@ class MyControllerTest < ActionDispatch::IntegrationTest
   ...
 end
 ```
+
+Note: the example above requires users fixtures to exist, which are not provided by this gem.
 
 ## Release
 
