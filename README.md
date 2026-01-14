@@ -76,6 +76,12 @@ For controllers (including concerns):
 rails g authentication:copy:controllers
 ```
 
+For channels (application_cable/connection.rb):
+
+```bash
+rails g authentication:copy:channels
+```
+
 For mailers:
 
 ```bash
@@ -87,6 +93,8 @@ For models:
 ```bash
 rails g authentication:copy:models
 ```
+
+Note: some generators may copy several files into the application folder, it's safe to delete the ones that don't require modification.
 
 ### Test helper
 
