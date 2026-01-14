@@ -14,6 +14,8 @@ module Yaag
         Current.session&.destroy!
         cookies.delete("session_id")
       end
+
+      alias :sign_in :sign_in_as
     end
   end
 end
