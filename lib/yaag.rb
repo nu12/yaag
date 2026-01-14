@@ -9,6 +9,12 @@ module Yaag
   module PasswordlessLogin
     extend ActiveSupport::Concern
 
+    included do
+      has_passwordless_login
+      has_many :sessions, dependent: :destroy
+      normalizes :email_address, with: ->(e) { e.strip.downcase }
+    end
+
     DEFAULT_LOGIN_TOKEN_EXPIRES_IN = 15.minutes
 
     class << self
