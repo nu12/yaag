@@ -12,11 +12,13 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   test "create with valid token" do
     get create_session_url(token: @user.email_address_login_token)
     assert_response :found
+    assert_notice "Signed in successfull"
   end
 
   test "create with invalid token" do
     get create_session_url(token: "not-valid")
     assert_response :see_other
+    assert_notice "Signin link is invalid or has expired"
   end
 
   test "destroy" do
