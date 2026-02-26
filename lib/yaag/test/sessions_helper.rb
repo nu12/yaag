@@ -16,6 +16,11 @@ module Yaag
       end
 
       alias :sign_in :sign_in_as
+
+      def assert_notice(text)
+        follow_redirect!
+        assert_select "div", /#{text}/
+      end
     end
   end
 end
