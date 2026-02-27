@@ -4,8 +4,8 @@
 <div class="container w-50 ">
   <h2>Sign In</h2>
   <%= form_with url: signin_path do |form| %>
-    <div class="field mt-3">
-      <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: t("yaag.forms.signin_placeholder"), value: params[:email_address], class: "form-control" %><br>
+    <div class="field py-3">
+      <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: t("yaag.forms.signin_placeholder"), value: params[:email_address], class: "form-control" %>
     </div>
     <div class="actions mb-3">
       <%= form.submit t("yaag.forms.signin_button"), class: "form-control btn btn-primary" %>

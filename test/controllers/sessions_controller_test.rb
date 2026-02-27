@@ -9,6 +9,12 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "create using the form" do
+    post session_url(token: @user.email_address_login_token)
+    assert_response :found
+    assert_notice "Signed in successfull"
+  end
+
   test "create with valid token" do
     get create_session_url(token: @user.email_address_login_token)
     assert_response :found

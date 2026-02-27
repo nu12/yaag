@@ -7,6 +7,8 @@ en:
     forms:
       signin_button: "Sign in" 
       signin_placeholder: "Enter your email address"
+      session_placeholder: "Enter a valid token"
+      return_to_signin_form: "Back to sign in page"
     sessions:
       successful: "Signed in successfully."
       destroy: "Signed out successfully."

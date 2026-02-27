@@ -1,2 +1,15 @@
 <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
 <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
+
+<div class="container w-50 ">
+  <h2>Sign In (Continuation)</h2>
+  <%= form_with url: session_path, method: :post do |form| %>
+    <div class="field py-3">
+      <%= form.text_field :token, required: true, placeholder: t("yaag.forms.session_placeholder"), class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= form.submit t("yaag.forms.signin_button"), class: "form-control btn btn-primary" %>
+    </div>
+    <%= link_to t("yaag.forms.return_to_signin_form"), new_signin_path %>
+  <% end %>
+</div>
