@@ -13,13 +13,12 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GEM_HOST_API_KEY: "${{secrets.RUBYGEM_API}}"
-      RUBY_VERSION: ruby-3.2.8
     steps:
     - uses: actions/checkout@v7
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
+    - name: Setup Ruby
+      uses: nu12/templates/actions/setup/ruby/v1@main
       with:
-        ruby-version: ${{ env.RUBY_VERSION }}
+        ruby-version: .ruby-version
     - name: Setup to RubyGems
       run: |
         mkdir -p $HOME/.gem
