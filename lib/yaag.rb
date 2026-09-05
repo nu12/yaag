@@ -21,7 +21,9 @@ module Yaag
     end
 
     module ClassMethods
-      def has_passwordless_login(attribute = :email_address)
+      def has_passwordless_login
+        attribute = :email_address
+
         include InstanceMethodsOnActivation.new(attribute)
 
         if respond_to?(:generates_token_for)

@@ -1,6 +1,9 @@
 <p>
-  Click <%= link_to "here", create_session_url(@user.email_address_login_token) %> to sign in.
+  <%= t("yaag.mailers.html_text") %>:
 </p>
 <p>
-  This link will expire in <%= distance_of_time_in_words(0, @user.email_address_login_token_expires_in) %>.
+  <%= link_to t("yaag.mailers.signin_button"), create_session_url(@user.email_address_login_token) %>
+</p>
+<p>
+  <%= t("yaag.mailers.expiration_notice") %> <%= distance_of_time_in_words(0, @user.email_address_login_token_expires_in) %>.
 </p>
