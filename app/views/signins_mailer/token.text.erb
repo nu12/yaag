@@ -1,5 +1,5 @@
-You can sign in with the following link (copy and paste in the browser):
+<%= t("yaag.mailers.txt_text") %>:
 
 <%= create_session_url(@user.email_address_login_token) %>
 
-This link will expire in <%= distance_of_time_in_words(0, @user.email_address_login_token_expires_in) %>.
+<%= t("yaag.mailers.expiration_notice") %> <%= distance_of_time_in_words(0, @user.email_address_login_token_expires_in) %>.

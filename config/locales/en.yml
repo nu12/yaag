@@ -15,3 +15,8 @@ en:
     signins:
       email_sent: "Sign in address sent to provided e-mail."
       email_subject: "Sign in link"
+    mailers:
+      html_text: "To sign in, click the link below"
+      txt_text: "To sign in, copy the link below and paste it in a browser"
+      signin_button: "Sign In"
+      expiration_notice: "This link will expire in"
