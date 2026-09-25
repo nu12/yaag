@@ -5,7 +5,7 @@ gemspec
 
 gem "rails", "~> 8.1.1"
 
-gem "minitest", "< 6"
+gem "minitest", "< 7"
 
 gem "puma"
 

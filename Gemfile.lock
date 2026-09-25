@@ -118,7 +118,9 @@ GEM
       net-smtp
     marcel (1.2.1)
     mini_mime (1.1.5)
-    minitest (5.27.0)
+    minitest (6.0.6)
+      drb (~> 2.0)
+      prism (~> 1.5)
     net-imap (0.6.6)
       date
       net-protocol
@@ -278,7 +280,7 @@ PLATFORMS
 
 DEPENDENCIES
   brakeman
-  minitest (< 6)
+  minitest (< 7)
   propshaft
   puma
   rails (~> 8.1.1)
